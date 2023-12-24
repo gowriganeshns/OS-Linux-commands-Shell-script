@@ -1,26 +1,26 @@
-# OS-Linux-commands-Shell-script
+# OS-Linux-commands-Shell-scripting
 Operating systems Lab exercise
 # Linux commands-Shell scripting
 Linux commands-Shell scripting
 
 # AIM:
-To develop an echo server and client using python socket
+To practice Linux Commands
 
-## DESIGN STEPS:
+# DESIGN STEPS:
 
 ### Step 1:
 
-Design of echo server and client using python socket
+Navigate to any Linux environment installed on the system or installed inside a virtual environment like virtual box/vmware or online linux JSLinux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192) or docker.
 
 ### Step 2:
 
-Implementation using Python code
+Execute the following commands
 
 ### Step 3:
 
-Testing the server and client 
+Testing the commands for the desired output. 
 
-## COMMANDS:
+# COMMANDS:
 cat > file1
 chanchal singhvi
 c.k. shukla
@@ -36,14 +36,14 @@ s.n. dasgupta
  
 #Comparing Files
 cmp file1 file2
-#OUTPUT
+##OUTPUT
  
 comm file1 file2
- #OUTPUT
+ ##OUTPUT
 
  
 diff file1 file2
-#OUTPUT
+##OUTPUT
 
 
 #Filters
@@ -52,7 +52,7 @@ Hello world
 This is my world
  
 cut -c1-3 file11
-#OUTPUT
+##OUTPUT
 
 
 
@@ -62,12 +62,12 @@ cat > file22
 1003 | Joe |  7000 | Developer
  
 cut -d "|" -f 1 file22
-#OUTPUT
+##OUTPUT
 
 
 
 cut -d "|" -f 2 file22
-#OUTPUT
+##OUTPUT
 
 
 cat > newfile 
@@ -75,40 +75,40 @@ Hello world
 hello world
  
 grep Hello newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 grep hello newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 
 grep -v hello newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 cat newfile | grep -i "hello"
-#OUTPUT
+##OUTPUT
 
 
 
 
 cat newfile | grep -i -c "hello"
-#OUTPUT
+##OUTPUT
 
 
 
 
 grep -R ubuntu /etc
-#OUTPUT
+##OUTPUT
 
 
 
 grep -w -n world newfile   
-#OUTPUT
+##OUTPUT
 
 
 
@@ -121,133 +121,133 @@ Unix is predecessor
 Linux is best in this World
  
 egrep -w 'Hello|hello' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 egrep -w '(H|h)ello' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 
 egrep '(^hello)' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 egrep '(world$)' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 egrep '(World$)' newfile 
-#OUTPUT
+##OUTPUT
 
 
 egrep '((W|w)orld$)' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 egrep '[1-9]' newfile 
-#OUTPUT
+##OUTPUT
 
 
 
 egrep 'Linux.*world' newfile 
-#OUTPUT
+##OUTPUT
 
 
 egrep 'Linux.*World' newfile 
-#OUTPUT
+##OUTPUT
 
 
 egrep l{2} newfile
-#OUTPUT
+##OUTPUT
 
 
 
 egrep 's{1,2}' newfile
-#OUTPUT 
+##OUTPUT 
 
 
 sed -n -e '3p' file23
-#OUTPUT
+##OUTPUT
 
 
 
 sed -n -e '$p' file23
-#OUTPUT
+##OUTPUT
 
 
 
 sed  -e 's/Ram/Sita/' file23
-#OUTPUT
+##OUTPUT
 
 
 
 sed  -e '2s/Ram/Sita/' file23
-#OUTPUT
+##OUTPUT
 
 
 
 sed  '/tom/s/5000/6000/' file23
-#OUTPUT
+##OUTPUT
 
 
 
 sed -n -e '1,5p' file23
-#OUTPUT
+##OUTPUT
 
 
 
 sed -n -e '2,/Joe/p' file23
-#OUTPUT
+##OUTPUT
 
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
-#OUTPUT
+##OUTPUT
 
 
 
 seq 10 
-#OUTPUT
+##OUTPUT
 
 
 
 seq 10 | sed -n '4,6p'
-#OUTPUT
+##OUTPUT
 
 
 
 seq 10 | sed -n '2,~4p'
-#OUTPUT
+##OUTPUT
 
 
 
 seq 3 | sed '2a hello'
-#OUTPUT
+##OUTPUT
 
 
 
 seq 2 | sed '2i hello'
-#OUTPUT
+##OUTPUT
 
 
 seq 10 | sed '2,9c hello'
-#OUTPUT
+##OUTPUT
 
 
 sed -n '2,4{s/^/$/;p}' file23
-#OUTPUT
+##OUTPUT
 
 
 
@@ -263,7 +263,7 @@ cat > file21
 1004 | Sit |  7000 | Dev
  
 sort file21
-#OUTPUT
+##OUTPUT
 
 
 cat > file22
@@ -275,7 +275,7 @@ cat > file22
 1004 | Sit |  7000 | Dev
  
 uniq file22
-#OUTPUT
+##OUTPUT
 
 
 
@@ -291,7 +291,7 @@ cat > file23
 1001 | Ram | 10000 | HR
  
 cat file23 | tr [:lower:] [:upper:]
- #OUTPUT
+ ##OUTPUT
 
 
  
@@ -301,18 +301,18 @@ www. google. com
 www. mrcet.... com
  
 cat urllist.txt | tr -d ' '
- #OUTPUT
+ ##OUTPUT
 
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
-#OUTPUT
+##OUTPUT
 
 
 
 #Backup commands
 tar -cvf backup.tar *
-#OUTPUT
+##OUTPUT
 
 
 mkdir backupdir
@@ -320,11 +320,11 @@ mkdir backupdir
 mv backup.tar backupdir
  
 tar -tvf backup.tar
-#OUTPUT
+##OUTPUT
 
 
 tar -xvf backup.tar
-#OUTPUT
+##OUTPUT
 
 gzip backup.tar
  
@@ -336,7 +336,7 @@ echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
-#OUTPUT
+##OUTPUT
 
  
 cat << stop > herecheck.txt
@@ -358,7 +358,7 @@ echo 'The $@ is ' $@
 echo 'The $# is ' $#
 echo 'The $$ is ' $$
 ps 
-#OUTPUT
+##OUTPUT
 
 
  
@@ -374,24 +374,24 @@ File name is  scriptest.sh
 The $@ is  1 2 3
 The $# is  3
 The $$ is  8807
-#OUTPUT
+##OUTPUT
 
  
 ls file1
-#OUTPUT
+##OUTPUT
 
 echo $?
-#OUTPUT 
+##OUTPUT 
 ./one
 bash: ./one: Permission denied
  
 echo $?
-#OUTPUT 
+##OUTPUT 
  
 abcd
  
 echo $?
- #OUTPUT
+ ##OUTPUT
 
 
  
@@ -406,14 +406,14 @@ echo "$val1 is greater than $val2"
 else
 echo "$val1 is less than $val2"
 fi
-#OUTPUT
+##OUTPUT
 
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
-#OUTPUT
+##OUTPUT
 
 
 # check file ownership
@@ -427,7 +427,7 @@ echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
  
 ./psswdperm.sh
-#OUTPUT
+##OUTPUT
 
 # check if with file location
 cat>ifnested.sh 
@@ -450,7 +450,7 @@ echo “Sorry, the object does not exist”
 fi
 
 ./ifnested.sh 
-#OUTPUT
+##OUTPUT
 
 
 
@@ -493,7 +493,7 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-#OUTPUT
+##OUTPUT
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -519,7 +519,7 @@ Fi
 $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
-#OUTPUT
+##OUTPUT
 
 
 # testing compound comparisons
@@ -533,7 +533,7 @@ echo "I cannot write to the file"
 fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
-#OUTPUT
+##OUTPUT
 
 # using the case command
 cat >casecheck.sh 
@@ -848,3 +848,9 @@ then
 else
 	echo "Number is NOT palindrome"
 fi
+
+
+
+
+# RESULT:
+The Commands are executed successfully.
