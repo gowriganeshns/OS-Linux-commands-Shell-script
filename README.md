@@ -218,6 +218,20 @@ egrep 's{1,2}' newfile
 ## OUTPUT 
 
 
+cat > file23
+```
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
+^d
+```
+
+
 sed -n -e '3p' file23
 ## OUTPUT
 
@@ -323,17 +337,7 @@ uniq file22
 
 
 #Using tr command
-cat > file23
-```
-1001 | Ram | 10000 | HR
-1001 | Ram | 10000 | HR
-1002 | tom |  5000 | Admin
-1003 | Joe |  7000 | Developer
-1005 | Sam |  5000 | HR
-1004 | Sit |  7000 | Dev
-1003 | Joe |  7000 | Developer
-1001 | Ram | 10000 | HR
-``` 
+
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
 
