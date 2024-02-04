@@ -393,6 +393,7 @@ stop
 
 
 cat < scriptest.sh 
+```
 \#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
@@ -401,12 +402,14 @@ echo “Second arg. is ” $2
 echo “Third arg. is ” $3
 echo “Fourth arg. is ” $4
 echo 'The $@ is ' $@
-echo 'The $# is ' $#
+echo 'The $\# is ' $1#
 echo 'The $$ is ' $$
 ps
 ^d
- 
+ ```
+
 cat scriptest.sh 
+```
 \#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
@@ -415,9 +418,10 @@ echo “Second arg. is ” $2
 echo “Third arg. is ” $3
 echo “Fourth arg. is ” $4
 echo 'The $@ is ' $@
-echo 'The $# is ' $#
+echo 'The $\# is ' $\#
 echo 'The $$ is ' $$
-ps 
+ps
+```
 ##OUTPUT
 
 
@@ -458,6 +462,7 @@ echo $?
 # mis-using string comparisons
 
 cat < strcomp.sh 
+```
 \#!/bin/bash
 val1=baseball
 val2=hockey
@@ -468,8 +473,10 @@ else
 echo "$val1 is less than $val2"
 fi
 ^d
+```
 
 cat strcomp.sh 
+```
 \#!/bin/bash
 val1=baseball
 val2=hockey
@@ -479,6 +486,7 @@ echo "$val1 is greater than $val2"
 else
 echo "$val1 is less than $val2"
 fi
+```
 ##OUTPUT
 
 
@@ -491,6 +499,7 @@ chmod 755 strcomp.sh
 
 # check file ownership
 cat < psswdperm.sh 
+```
 \#!/bin/bash
 if [ -O /etc/passwd ]
 then
@@ -499,6 +508,7 @@ else
 echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
 ^d
+```
 
 cat psswdperm.sh 
 /#!/bin/bash
