@@ -393,7 +393,7 @@ stop
 
 
 cat < scriptest.sh 
-#!/bin/sh
+\#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
 echo “First arg. is ” $1
@@ -407,7 +407,7 @@ ps
 ^d
  
 cat scriptest.sh 
-#!/bin/sh
+\#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
 echo “First arg. is ” $1
@@ -458,7 +458,7 @@ echo $?
 # mis-using string comparisons
 
 cat < strcomp.sh 
-/#!/bin/bash
+\#!/bin/bash
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -470,7 +470,7 @@ fi
 ^d
 
 cat strcomp.sh 
-/#!/bin/bash
+\#!/bin/bash
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -491,7 +491,7 @@ chmod 755 strcomp.sh
 
 # check file ownership
 cat < psswdperm.sh 
-/#!/bin/bash
+\#!/bin/bash
 if [ -O /etc/passwd ]
 then
 echo “You are the owner of the /etc/passwd file”
@@ -514,7 +514,7 @@ fi
 
 # check if with file location
 cat>ifnested.sh 
-/#!/bin/bash
+\#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -534,7 +534,7 @@ fi
 ^d
 
 cat ifnested.sh 
-/#!/bin/bash
+\#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -559,7 +559,7 @@ fi
 
 # using numeric test comparisons
 cat > iftest.sh 
-/#!/bin/bash
+\#!/bin/bash
 val1=10
 val2=11
 if [ $val1 -gt 5 ]
@@ -575,7 +575,7 @@ fi
 ^d
 
 cat iftest.sh 
-/#!/bin/bash
+\#!/bin/bash
 val1=10
 val2=11
 if [ $val1 -gt 5 ]
@@ -596,7 +596,7 @@ $ ./iftest.sh
 
 # check if a file
 cat > ifnested.sh 
-#!/bin/bash
+\#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -616,7 +616,7 @@ fi
 ^d
 
 cat ifnested.sh 
-#!/bin/bash
+\#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -641,7 +641,7 @@ $ ./ifnested.sh
 
 # looking for a possible value using elif
 cat elifcheck.sh 
-/#!/bin/bash
+\#!/bin/bash
 if [ $USER = Ram ]
 then
 echo "Welcome $USER"
@@ -668,7 +668,7 @@ $ ./elifcheck.sh
 
 # testing compound comparisons
 cat> ifcompound.sh 
-/#!/bin/bash
+\#!/bin/bash
 if [ -d $HOME ] && [ -w $HOME ]
 then
 echo "The file exists and you can write to it"
@@ -697,8 +697,8 @@ $ chmod 755 casecheck.sh
 $ ./casecheck.sh 
  
 cat > whiletest
-#!/bin/bash
-# while command test
+\#!/bin/bash
+\#while command test
 var1=10
 while [ $var1 -gt 0 ]
 do
@@ -711,7 +711,7 @@ $ ./whiletest.sh
  
  
 cat untiltest.sh 
-# using the until command
+\#using the until command
 var1=100
 until [ $var1 -eq 0 ]
 do
@@ -724,8 +724,8 @@ $ chmod 755 untiltest.sh
  
  
 cat forin1.sh 
-#!/bin/bash
-# basic for command
+\#!/bin/bash
+\#basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
@@ -758,8 +758,8 @@ $ chmod 755 forin2.sh
 $ ./forin2.sh 
  
 cat forin3.sh 
-#!/bin/bash
-# another example of how not to use the for command
+\#!/bin/bash
+\# another example of how not to use the for command
 for test in I don\'t know if "this'll" work
 do
 echo "word:$test"
