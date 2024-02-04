@@ -377,11 +377,15 @@ tar -xvf backup.tar
 ## OUTPUT
 
 gzip backup.tar
+
+ls .gz
+## OUTPUT
  
 gunzip backup.tar.gz
+## OUTPUT
+
  
- 
-#Shell Script
+# Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
@@ -398,6 +402,10 @@ i cant stop
 for this non stop movement
 stop
 ```
+
+cat herecheck.txt
+## OUTPUT
+
 
 cat < scriptest.sh 
 ```bash
