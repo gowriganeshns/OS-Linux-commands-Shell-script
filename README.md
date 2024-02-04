@@ -21,6 +21,23 @@ Execute the following commands
 Testing the commands for the desired output. 
 
 # COMMANDS:
+### Create the following files file1, file2 as follows:
+cat < file1
+chanchal singhvi
+c.k. shukla
+s.n. dasgupta
+sumit chakrobarty
+^d
+
+cat > file2
+anil aggarwal
+barun sengupta
+c.k. shukla
+lalit chowdury
+s.n. dasgupta
+^d
+
+### Display the content of the files
 cat > file1
 chanchal singhvi
 c.k. shukla
@@ -47,6 +64,20 @@ diff file1 file2
 
 
 #Filters
+
+### Create the following files file11, file22 as follows:
+
+cat < file11
+Hello world
+This is my world
+^d
+
+cat < file22
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+^d
+
 cat > file11
 Hello world
 This is my world
@@ -69,6 +100,11 @@ cut -d "|" -f 1 file22
 cut -d "|" -f 2 file22
 ##OUTPUT
 
+
+cat < newfile 
+Hello world
+hello world
+^d
 
 cat > newfile 
 Hello world
@@ -111,7 +147,13 @@ grep -w -n world newfile
 ##OUTPUT
 
 
-
+cat < newfile 
+Hello world
+hello world
+Linux is world number 1
+Unix is predecessor
+Linux is best in this World
+^d
 
 cat > newfile 
 Hello world
@@ -293,7 +335,11 @@ cat > file23
 cat file23 | tr [:lower:] [:upper:]
  ##OUTPUT
 
-
+cat < urllist.txt
+www. yahoo. com
+www. google. com
+www. mrcet.... com
+^d
  
 cat > urllist.txt
 www. yahoo. com
@@ -344,7 +390,21 @@ hello in this world
 i cant stop
 for this non stop movement
 stop
- 
+
+
+cat < scriptest.sh 
+#!/bin/sh
+echo “File name is $0 ”
+echo "File name is " `basename $0`
+echo “First arg. is ” $1
+echo “Second arg. is ” $2
+echo “Third arg. is ” $3
+echo “Fourth arg. is ” $4
+echo 'The $@ is ' $@
+echo 'The $# is ' $#
+echo 'The $$ is ' $$
+ps
+^d
  
 cat scriptest.sh 
 #!/bin/sh
@@ -396,6 +456,19 @@ echo $?
 
  
 # mis-using string comparisons
+
+cat < strcomp.sh 
+/#!/bin/bash
+val1=baseball
+val2=hockey
+if [ $val1 \> $val2 ]
+then
+echo "$val1 is greater than $val2"
+else
+echo "$val1 is less than $val2"
+fi
+^d
+
 cat strcomp.sh 
 /#!/bin/bash
 val1=baseball
@@ -417,6 +490,16 @@ chmod 755 strcomp.sh
 
 
 # check file ownership
+cat < psswdperm.sh 
+/#!/bin/bash
+if [ -O /etc/passwd ]
+then
+echo “You are the owner of the /etc/passwd file”
+else
+echo “Sorry, you are not the owner of the /etc/passwd file”
+fi
+^d
+
 cat psswdperm.sh 
 /#!/bin/bash
 if [ -O /etc/passwd ]
@@ -448,6 +531,26 @@ fi
 else
 echo “Sorry, the object does not exist”
 fi
+^d
+
+cat ifnested.sh 
+/#!/bin/bash
+if [ -e $HOME ]
+then
+echo “$HOME The object exists, is it a file?”
+if [ -f $HOME ]
+then
+echo “Yes,$HOME it is a file!”
+else
+echo “No,$HOME it is not a file!”
+if [ -f $HOME/.bash_history ]
+then
+echo “But $HOME/.bash_history is a file!”
+fi
+fi
+else
+echo “Sorry, the object does not exist”
+fi
 
 ./ifnested.sh 
 ##OUTPUT
@@ -455,6 +558,22 @@ fi
 
 
 # using numeric test comparisons
+cat > iftest.sh 
+/#!/bin/bash
+val1=10
+val2=11
+if [ $val1 -gt 5 ]
+then
+echo “The test value $val1 is greater than 5”
+fi
+if [ $val1 -eq $val2 ]
+then
+echo “The values are equal”
+else
+echo “The values are different”
+fi
+^d
+
 cat iftest.sh 
 /#!/bin/bash
 val1=10
@@ -470,7 +589,32 @@ else
 echo “The values are different”
 fi
 
+$ chmod 755 iftest.sh
+ 
+$ ./iftest.sh 
+##OUTPUT
+
 # check if a file
+cat > ifnested.sh 
+#!/bin/bash
+if [ -e $HOME ]
+then
+echo “$HOME The object exists, is it a file?”
+if [ -f $HOME ]
+then
+echo “Yes,$HOME it is a file!”
+else
+echo “No,$HOME it is not a file!”
+if [ -f $HOME/.bash_history ]
+then
+echo “But $HOME/.bash_history is a file!”
+fi
+fi
+else
+echo “Sorry, the object does not exist”
+fi
+^d
+
 cat ifnested.sh 
 #!/bin/bash
 if [ -e $HOME ]
@@ -514,7 +658,7 @@ then
 echo "$USER, Do not forget to logout when you're done"
 else
 echo "Sorry, you are not allowed here"
-Fi
+fi
  
 $ chmod 755 elifcheck.sh
  
