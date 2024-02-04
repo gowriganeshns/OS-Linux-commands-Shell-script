@@ -39,18 +39,20 @@ s.n. dasgupta
 
 ### Display the content of the files
 cat > file1
+```
 chanchal singhvi
 c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
- 
+ ```
 cat > file2
+```
 anil aggarwal
 barun sengupta
 c.k. shukla
 lalit chowdury
 s.n. dasgupta
- 
+ ```
 #Comparing Files
 cmp file1 file2
 ##OUTPUT
@@ -73,25 +75,29 @@ This is my world
 ^d
 
 cat < file22
+```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 ^d
+```
 
 cat > file11
+```
 Hello world
 This is my world
- 
+```
 cut -c1-3 file11
 ##OUTPUT
 
 
 
 cat > file22
+```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
- 
+ ```
 cut -d "|" -f 1 file22
 ##OUTPUT
 
@@ -102,10 +108,11 @@ cut -d "|" -f 2 file22
 
 
 cat < newfile 
+```
 Hello world
 hello world
 ^d
-
+````
 cat > newfile 
 Hello world
 hello world
@@ -148,20 +155,23 @@ grep -w -n world newfile
 
 
 cat < newfile 
+```
 Hello world
 hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
 ^d
+```
 
-cat > newfile 
+cat > newfile
+```
 Hello world
 hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
- 
+ ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
@@ -298,24 +308,26 @@ sed -n '2,4{s/$/*/;p}' file23
 
 #Sorting File content
 cat > file21
+```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 1005 | Sam |  5000 | HR
 1004 | Sit |  7000 | Dev
- 
+``` 
 sort file21
 ## OUTPUT
 
 
 cat > file22
+```
 1001 | Ram | 10000 | HR
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 1005 | Sam |  5000 | HR
 1004 | Sit |  7000 | Dev
- 
+``` 
 uniq file22
 ## OUTPUT
 
@@ -323,6 +335,7 @@ uniq file22
 
 #Using tr command
 cat > file23
+```
 1001 | Ram | 10000 | HR
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
@@ -331,21 +344,23 @@ cat > file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
- 
+``` 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
 
 cat < urllist.txt
+```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
 ^d
- 
+ ```
 cat > urllist.txt
+```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
- 
+ ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
@@ -378,19 +393,22 @@ gunzip backup.tar.gz
  
  
 #Shell Script
+```
 echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
+```
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
 
  
 cat << stop > herecheck.txt
+```
 hello in this world
 i cant stop
 for this non stop movement
 stop
-
+```
 
 cat < scriptest.sh 
 ```
@@ -422,22 +440,11 @@ echo 'The $\# is ' $\#
 echo 'The $$ is ' $$
 ps
 ```
-## OUTPUT
-
-
  
 chmod 777 scriptest.sh
  
 ./scriptest.sh 1 2 3
-“File name is ” ./scriptest.sh
-File name is  scriptest.sh
-“First arg. is ” 1
-“Second arg. is ” 2
-“Third arg. is ” 3
-“Fourth arg. is ”
-The $@ is  1 2 3
-The $# is  3
-The $$ is  8807
+
 ## OUTPUT
 
  
@@ -637,7 +644,7 @@ fi
 ```
 
 cat ifnested.sh 
-```
+```bash
 \#!/bin/bash
 if [ -e $HOME ]
 then
@@ -664,7 +671,7 @@ $ ./ifnested.sh
 
 # looking for a possible value using elif
 cat elifcheck.sh 
-```
+```bash
 \#!/bin/bash
 if [ $USER = Ram ]
 then
@@ -693,7 +700,7 @@ $ ./elifcheck.sh
 
 # testing compound comparisons
 cat> ifcompound.sh 
-```
+```bash
 \#!/bin/bash
 if [ -d $HOME ] && [ -w $HOME ]
 then
@@ -708,7 +715,7 @@ $ ./ifcompound.sh
 
 # using the case command
 cat >casecheck.sh 
-```
+```bash
 case $USER in
 Ram | Robert)
 echo "Welcome, $USER"
