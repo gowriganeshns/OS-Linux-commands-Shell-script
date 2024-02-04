@@ -49,16 +49,16 @@ cat < file2
 ## OUTPUT
 
 
-#Comparing Files
+# Comparing Files
 cmp file1 file2
-##OUTPUT
+## OUTPUT
  
 comm file1 file2
- ##OUTPUT
+ ## OUTPUT
 
  
 diff file1 file2
-##OUTPUT
+## OUTPUT
 
 
 #Filters
