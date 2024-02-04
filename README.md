@@ -22,29 +22,14 @@ Testing the commands for the desired output.
 
 # COMMANDS:
 ### Create the following files file1, file2 as follows:
-cat < file1
-chanchal singhvi
-c.k. shukla
-s.n. dasgupta
-sumit chakrobarty
-^d
-
-cat > file2
-anil aggarwal
-barun sengupta
-c.k. shukla
-lalit chowdury
-s.n. dasgupta
-^d
-
-### Display the content of the files
 cat > file1
 ```
 chanchal singhvi
 c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
- ```
+^d
+```
 cat > file2
 ```
 anil aggarwal
@@ -52,7 +37,18 @@ barun sengupta
 c.k. shukla
 lalit chowdury
 s.n. dasgupta
- ```
+^d
+```
+### Display the content of the files
+cat < file1
+## OUTPUT
+
+
+
+cat < file2
+## OUTPUT
+
+
 #Comparing Files
 cmp file1 file2
 ##OUTPUT
@@ -69,42 +65,34 @@ diff file1 file2
 
 ### Create the following files file11, file22 as follows:
 
-cat < file11
-Hello world
-This is my world
-^d
-
-cat < file22
-```
-1001 | Ram | 10000 | HR
-1002 | tom |  5000 | Admin
-1003 | Joe |  7000 | Developer
-^d
-```
-
 cat > file11
 ```
 Hello world
 This is my world
+^d
 ```
-cut -c1-3 file11
-##OUTPUT
-
-
-
 cat > file22
 ```
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
- ```
+^d
+```
+
+
+cut -c1-3 file11
+## OUTPUT
+
+
+
+
 cut -d "|" -f 1 file22
-##OUTPUT
+## OUTPUT
 
 
 
 cut -d "|" -f 2 file22
-##OUTPUT
+## OUTPUT
 
 
 cat < newfile 
@@ -171,6 +159,7 @@ hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
+^d
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
