@@ -411,7 +411,7 @@ stop
 ```
 
 cat < scriptest.sh 
-```
+```bash
 \#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
@@ -427,7 +427,7 @@ ps
  ```
 
 cat scriptest.sh 
-```
+```bash
 \#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
@@ -469,7 +469,7 @@ echo $?
 # mis-using string comparisons
 
 cat < strcomp.sh 
-```
+```bash
 \#!/bin/bash
 val1=baseball
 val2=hockey
@@ -483,7 +483,7 @@ fi
 ```
 
 cat strcomp.sh 
-```
+```bash
 \#!/bin/bash
 val1=baseball
 val2=hockey
@@ -506,7 +506,7 @@ chmod 755 strcomp.sh
 
 # check file ownership
 cat < psswdperm.sh 
-```
+```bash
 \#!/bin/bash
 if [ -O /etc/passwd ]
 then
@@ -518,7 +518,7 @@ fi
 ```
 
 cat psswdperm.sh 
-```
+```bash
 /#!/bin/bash
 if [ -O /etc/passwd ]
 then
@@ -532,7 +532,7 @@ fi
 
 # check if with file location
 cat>ifnested.sh 
-```
+```bash
 \#!/bin/bash
 if [ -e $HOME ]
 then
@@ -580,7 +580,7 @@ fi
 
 # using numeric test comparisons
 cat > iftest.sh 
-```
+```bash
 \#!/bin/bash
 val1=10
 val2=11
@@ -599,7 +599,7 @@ fi
 
 
 cat iftest.sh 
-```
+```bash
 \#!/bin/bash
 val1=10
 val2=11
@@ -622,7 +622,7 @@ $ ./iftest.sh
 
 # check if a file
 cat > ifnested.sh 
-```
+```bash
 \#!/bin/bash
 if [ -e $HOME ]
 then
@@ -733,7 +733,7 @@ $ chmod 755 casecheck.sh
 $ ./casecheck.sh 
  
 cat > whiletest
-```
+```bash
 #!/bin/bash
 #while command test
 var1=10
@@ -749,7 +749,7 @@ $ ./whiletest.sh
  
  
 cat untiltest.sh 
-```
+```bash
 \#using the until command
 var1=100
 until [ $var1 -eq 0 ]
@@ -763,7 +763,7 @@ $ chmod 755 untiltest.sh
  
  
 cat forin1.sh 
-```
+```bash
 \#!/bin/bash
 \#basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
@@ -776,7 +776,7 @@ $ chmod 755 forin1.sh
  
  
 cat forin2.sh 
-```
+```bash
 \#!/bin/bash
 \# another example of how not to use the for command
 for test in I don't know if this'll work
@@ -788,7 +788,7 @@ done
 $ chmod 755 forin2.sh
  
 cat forin2.sh 
-```
+```bash
 \#!/bin/bash
 \# another example of how not to use the for command
 for test in I don't know if this'll work
@@ -801,7 +801,7 @@ $ chmod 755 forin2.sh
 $ ./forin2.sh 
  
 cat forin3.sh 
-```
+```bash
 \#!/bin/bash
 \# another example of how not to use the for command
 for test in I don\'t know if "this'll" work
@@ -812,7 +812,7 @@ done
 $ ./forin3.sh 
  
 cat forin1.sh 
-```
+```bash
 #!/bin/bash
 # basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
@@ -824,7 +824,7 @@ $ chmod 755 forin1.sh
 
 ## OUTPUT
 cat forinfile.sh 
-```
+```bash
 #!/bin/bash
 # reading values from a file
 file="cities"
@@ -847,7 +847,7 @@ Khammam
 
 
 cat forctype.sh 
-```
+```bash
 #!/bin/bash
 # testing the C-style for loop
 for (( i=1; i <= 5; i++ ))
@@ -860,7 +860,7 @@ $ ./forctype.sh
 ## OUTPUT
 
 cat forctype1.sh 
-```
+```bash
 #!/bin/bash
 # multiple variables
 for (( a=1, b=5; a <= 5; a++, b-- ))
@@ -873,7 +873,7 @@ $ ./forctype1.sh
 ## OUTPUT
 
 cat fornested1.sh 
-```
+```bash
 #!/bin/bash
 # nesting for loops
 for (( a = 1; a <= 3; a++ ))
@@ -892,7 +892,7 @@ $ ./fornested1.sh
 
  
 cat forbreak.sh 
-```
+```bash
 #!/bin/bash
 # breaking out of a for loop
 for var1 in 1 2 3 4 5
@@ -912,7 +912,7 @@ $ chmod 755 forbreak.sh
 $ ./forbreak.sh 
  
 cat forbreak.sh 
-```
+```bash
 #!/bin/bash
 # breaking out of a for loop
 for var1 in 1 2 3 4 5
@@ -933,7 +933,7 @@ $ ./forcontinue.sh
 ## OUTPUT
  
 cat exread.sh 
-```
+```bash
 #!/bin/bash
 # testing the read command
 echo -n "Enter your name: "
@@ -948,7 +948,7 @@ $ ./exread.sh
 
 
  cat exread1.sh
-```
+```bash
 #!/bin/bash
 # testing the read command
 read -p "Enter your name: " name
@@ -963,7 +963,7 @@ $ chmod 755 exread1.sh
 $ ./exread1.sh 
  
 cat funcex.sh
-```
+```bash
 #!/bin/bash
 # trying to access script parameters inside a function
 function func {
@@ -985,7 +985,7 @@ fi
 
  
 cat argshift.sh
-```
+```bash
 #!/bin/bash 
  while (( "$#" )); do 
   echo $1 
@@ -998,7 +998,7 @@ $ chmod 777 argshift.sh
 $ ./argshift.sh 1 2 3
  
  cat argshift1.sh
-```
+```bash
  #/bin/bash 
  # store arguments in a special array 
 args=("$@") 
@@ -1015,7 +1015,7 @@ $ chmod 777 argshift.sh
 $ ./argshift.sh 1 2 3
  
 cat argshift.sh
-```
+```bash
 #!/bin/bash 
 set -x 
 while (( "$#" )); do 
@@ -1029,7 +1029,7 @@ set +x
  
  
 cat > nc.awk
-```
+```bash
 BEGIN{}
 {
 print len=length($0),"\t",$0 
@@ -1043,7 +1043,7 @@ print "No of Words count:",wordcount
 }
  ```
 cat>data.dat
-```
+```bash
 bcdfghj
 abcdfghj
 bcdfghj
@@ -1059,7 +1059,7 @@ awk -f nc.awk data.dat
 ## OUTPUT 
  
 cat > palindrome.sh
-```
+```bash
 #num=545
 echo "Enter the number"
 read num
