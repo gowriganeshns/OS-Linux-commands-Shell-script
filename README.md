@@ -299,7 +299,9 @@ sed  '/tom/s/5000/6000/' file23
 
 
 sed -n -e '1,5p' file23
+
 ## OUTPUT
+
 ![304759738-4539c59e-1967-4511-aa85-02e0193a1e13](https://github.com/23004513/OS-Linux-commands-Shell-script/assets/138973069/d727de65-8c1f-474b-a1a7-2d87bbc4b354)
 
 
@@ -313,6 +315,7 @@ sed -n -e '2,/Joe/p' file23
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
+
 ![304766794-9a68ec8b-c637-4d4f-b099-279531805f0b](https://github.com/23004513/OS-Linux-commands-Shell-script/assets/138973069/7a82bd4e-4d0e-4340-89d1-882aa938ae94)
 
 
@@ -343,11 +346,13 @@ seq 3 | sed '2a hello'
 
 seq 2 | sed '2i hello'
 ##OUTPUT
+
 ![304768296-37f79adc-6b21-4499-bbfa-d74aeae1461a](https://github.com/23004513/OS-Linux-commands-Shell-script/assets/138973069/50840e06-7531-454b-893b-82157fa696d9)
 
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
+
 ![304768441-9c4330d4-0447-451d-a81a-cf358636d16d](https://github.com/23004513/OS-Linux-commands-Shell-script/assets/138973069/02460176-5dbc-4cd3-86e2-676ef79130bc)
 
 
