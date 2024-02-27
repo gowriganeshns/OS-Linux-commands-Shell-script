@@ -562,62 +562,79 @@ Unix is predecessor
 Linux is best in this World
 ^d
  ```
+
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
-
+```
+Hello world
+hello world
+```
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
-
+```
+Hello world
+hello world
+```
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
-
-
+```
+Hello world
+hello world
+```
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
-
+```
+hello world
+```
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
-
+```
+Hello world
+hello world
+```
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+```
+```
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
-
+```
+Hello world
+hello world
+```
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
-
+```
+```
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+```
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+```
+```
 
 egrep l{2} newfile
 ## OUTPUT
-
-
+```
+Hello world
+hello world
+```
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+```
+```
 
 cat > file23
 ```
@@ -631,7 +648,6 @@ cat > file23
 1001 | Ram | 10000 | HR
 ^d
 ```
-
 
 sed -n -e '3p' file23
 ## OUTPUT
