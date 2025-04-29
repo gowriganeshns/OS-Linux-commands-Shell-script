@@ -372,6 +372,8 @@ tar -cvf backup.tar *
 mkdir backupdir
  
 mv backup.tar backupdir
+
+cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
