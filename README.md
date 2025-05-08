@@ -43,22 +43,34 @@ s.n. dasgupta
 cat < file1
 ## OUTPUT
 
-
+chanchal singhvi
+c.k. shukla
+s.n. dasgupta
+sumit chakrobarty
+^d
 
 cat < file2
 ## OUTPUT
 
-
+anil aggarwal
+barun sengupta
+c.k. shukla
+lalit chowdury
+s.n. dasgupta
+^d
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ![305638280-75a5512e-1a3b-45f7-ad9a-369f872d4e8a](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/06eb8014-afd0-423f-91de-24add65773e6)
+
 comm file1 file2
  ## OUTPUT
 
- 
+ ![305638353-06aaf5ba-ea64-4e0c-8499-115f566e830f](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/89958b53-f302-4e66-9a2a-1bc575cd3016)
+
 diff file1 file2
 ## OUTPUT
+![305638538-dd5d576c-fdad-4142-8a42-957143d516bb](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/74e8dd02-e710-41a2-8fcf-76a85a39b53a)
 
 
 #Filters
@@ -82,6 +94,7 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
+![305638593-057abf47-bdbc-4ed1-b8c0-df0302401aad](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/39892484-95a6-45a0-91d0-b9e45193fa44)
 
 
 
@@ -89,10 +102,13 @@ cut -c1-3 file11
 cut -d "|" -f 1 file22
 ## OUTPUT
 
+![305638603-64f3b346-85d6-40e6-a5ca-0795b38c67c2](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/89b4c79b-9e55-4ac7-b365-072e4fb7aded)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+![305638740-26e24d41-1567-4bb7-a427-463ae5f32f95](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/9f6e4636-dbae-4b5f-9436-80a81c6f1a21)
+UT
 
 
 cat < newfile 
@@ -107,11 +123,13 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
+![305638765-a75c35a9-3407-45bb-a60c-51ac39e93dd0](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/69886f04-c42e-44b1-9387-77238888e1b0)
 
 
 
 grep hello newfile 
 ## OUTPUT
+![305638777-1fed07d9-9937-4958-934c-dae3f0c403d3](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/7baf2cdf-fdca-4735-a73b-a7980a6ae537)
 
 
 
@@ -119,17 +137,20 @@ grep hello newfile
 grep -v hello newfile 
 ## OUTPUT
 
+![305638788-675e0427-572c-4aca-953c-cc45455944ae](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/b95577ca-d358-4082-a7be-22a0d64cbce3)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
+![305638803-8dea6fe3-2ada-4ab9-ae14-db1f7eaa36f7](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/1c686f6a-7040-446b-8f33-f4a4afa9f913)
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
+![305638905-fd4ce646-de28-4957-83b6-e305c1f4439a](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/985e47b9-ef86-4d4d-86d6-181e0da2bda0)
 
 
 
@@ -140,6 +161,7 @@ grep -R ubuntu /etc
 
 grep -w -n world newfile   
 ## OUTPUT
+![305638979-dfaf1853-3e52-470b-9bc5-38d3057ce4b2](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/fe37c93e-ce3f-4e47-9857-e509cdb91257)
 
 
 cat < newfile 
@@ -163,16 +185,19 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
+![305638995-63f44836-f6b6-4d66-bdf4-9a53fb6fe0d4](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/41f029bd-2bb2-48b6-a324-1f02b3da0f8d)
 
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
+![305639002-8cc574fc-24a7-4e1d-bfd0-56ca0ff8dd45](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/b5fcc910-b45c-4e6d-ada2-c0497dfe119a)
 
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
+![305639007-50e2bb9b-2c9b-4df4-9d46-903adbd0e6da](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/31388f92-b15b-4173-a750-569e490f3920)
 
 
 
@@ -180,42 +205,51 @@ egrep -w '(H|h)ell[a-z]' newfile
 egrep '(^hello)' newfile 
 ## OUTPUT
 
+![305639010-67ad9538-9b91-423e-8266-1fb2edbc9d40](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/38a2a83d-20bb-40b6-8d13-2dec3f984df9)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
+![305639019-6339ba41-1e5e-443d-825d-b2809e856a19](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/ecc4e7f9-0aca-4dea-b706-02d3529b98d0)
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
+![305639035-fb6711f3-9556-4718-a749-555f06debab1](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/b15347bc-ef90-47f4-b409-5f2ee1b0464d)
 
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
+![305639048-cc9d61d6-82b4-42a2-a3eb-593038c19fc7](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/59e881a5-980a-41ee-92aa-a0f48d48471b)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
+![305639050-6d099778-2b88-4e6f-8b06-c40b2f09a638](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/abd5e0ac-6793-4668-9470-b40f9913653f)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+![305639093-d1c365df-03a4-4e54-928e-4a381e058096](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/498c365b-38fd-4c5f-80b8-f277157ce749)
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 
+![305639103-591ab9e6-e543-40a3-a4ec-f9012f8ceadf](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/5d83f640-7d1f-446c-921e-3acd8a727d8e)
 
 egrep l{2} newfile
 ## OUTPUT
 
+![305639113-98619322-54a4-4a4c-ad34-fa84af7dfff4](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/81587370-6238-4d97-addc-b115c7345535)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+![305639119-91245c5a-f669-4b1c-8641-44667f0689f7](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/66644677-822e-4bee-8b15-c298bf2bb5c9)
 
 
 cat > file23
@@ -235,6 +269,7 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
+![305639126-6067006c-52ab-4263-bb7c-8675a5cba9d7](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/442f6e08-7aa5-47df-870f-e4f796653976)
 
 
 sed -n -e '$p' file23
@@ -244,6 +279,7 @@ sed -n -e '$p' file23
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
+![305639157-ea154aa6-2031-4bc9-a5fa-d246da2078ce](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/3d8e45eb-1723-4555-9b45-831799166efb)
 
 
 
@@ -251,19 +287,23 @@ sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
 
+![305639166-b35d81b6-ed9b-4d25-b8cb-d3ca5c25fdf0](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/575903a4-5594-4f5a-b65e-63fb8fdc013a)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
 
+![305639177-e6e1ba26-5291-43fd-8f40-d6fe00a20498](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/9ce4ac97-5776-4430-af38-627fba180771)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
+![305639187-d727de65-8c1f-474b-a1a7-2d87bbc4b354](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/5e387c8b-2d4d-411b-9ede-4a928761620e)
 
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
+![305639194-ca6da655-591e-498b-9afb-e9bcd8e09c64](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/16e8eb53-c39c-43bb-b7b7-9acf0e3432ba)
 
 
 
@@ -271,43 +311,52 @@ sed -n -e '2,/Joe/p' file23
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
+![305639202-7a82bd4e-4d0e-4340-89d1-882aa938ae94](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/1896f4de-77b2-492d-88db-1b2c889f016e)
 
 
 seq 10 
 ## OUTPUT
 
 
+![305639219-fa19b57d-1c9d-4bef-81a8-159ef1e802be](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/84b762c3-d5a6-4dd7-9bb5-2424db42a2cc)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
 
+![305639234-a4650fd0-7816-4e90-88fe-036a692d2e76](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/c9b62f54-0c03-4ea3-83df-168447774427)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
+![305639247-e76d46db-4e87-4616-adf3-209f22705a28](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/cdb0bf37-3f63-4c85-ba94-0e9c71556b44)
 
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
+![305639257-b251a39b-a769-44e6-aca2-a4a33e8afc48](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/262c227c-cdcc-4432-8b88-804991064a81)
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
 
+![305639297-50840e06-7531-454b-893b-82157fa696d9](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/892198cb-9db9-481b-84bc-adbdc461bce2)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
 
+![305639305-02460176-5dbc-4cd3-86e2-676ef79130bc](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/c7a51d24-7fb0-4fad-a527-37f3447d4923)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
+![305639312-757e595f-068c-4a2d-9a74-a0c5c280d674](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/949298a9-4cbb-4a1e-baec-9052aeb33dc5)
 
 
 sed -n '2,4{s/$/*/;p}' file23
 
+![305639376-3a948998-5ccc-471c-8301-871e4f040ac5](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/26c19eba-a34a-4611-a9cd-660a3ba6b4ec)
 
 #Sorting File content
 cat > file21
@@ -320,6 +369,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
+![305639387-9dcd56c0-8260-4a34-a658-4a9bedfc00a6](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/0900624f-a7ab-4bab-a644-e4b09c570fce)
 
 
 cat > file22
@@ -333,13 +383,13 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
+![305639402-10564297-a8ca-42e7-9e7b-11d2f5823b34](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/f6c71d1c-027d-46c7-9b5c-c6695f6472ee)
 
 
 #Using tr command
-
-cat file23 | tr [:lower:] [:upper:]
- ## OUTPUT
+cat file23|tr[:lower:] [:upper:]
+## OUTPUT
+![305639440-9ddada14-d8d3-4b5a-a383-4e756bac6c9c](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/ce34ce11-01f6-48f6-9357-48b16bbf8e04)
 
 cat < urllist.txt
 ```
@@ -356,17 +406,20 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
+![305639452-a3958730-a84b-4be3-934c-75127fd45e20](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/0d9bcf52-0f2a-4160-b6fc-8de390ffddb0)
 
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
+![305639476-36ba05c2-828f-4cf0-b89c-7704eb2a9ca0](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/214181f6-2ef5-4226-9c04-662deb28faa7)
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
+![305639489-59aebb74-5bab-4b16-856c-0702c0987aa0](https://github.com/gowriganeshns/OS-Linux-commands-Shell-script/assets/147473265/1d06c1ea-ace6-4f40-99da-b30f749f5719)
 
 
 mkdir backupdir
